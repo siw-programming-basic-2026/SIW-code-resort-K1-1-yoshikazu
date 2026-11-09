@@ -15,4 +15,7 @@ def create_player():
 def show_player(player):
     # TODO 3: 辞書から name、money、x、y を取り出して表示する。 / TODO 3: Read name, money, x and y from the dictionary and display them.
     # 表示例は README.md を参照。 / See README.md for sample output.
-    pass
+
+    print(f"名前：{player['name']}")
+    print(f"所持金：{player['money']}")
+    print(f"位置：x={player['x']},y={player['y']}")
