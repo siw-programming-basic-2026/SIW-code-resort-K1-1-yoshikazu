@@ -5,7 +5,7 @@ def create_player():
     # main.py の呼び出しも変更し、異なる初期値で表示を確認する。
     # Update the call in main.py and check the display with different initial values.
     return {
-        "name": "プレイヤー",
+        "name": input("名前を入力してください："),
         "x": 1,
         "y": 1,
         "money": 1000,

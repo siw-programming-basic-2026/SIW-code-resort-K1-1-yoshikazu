@@ -13,7 +13,7 @@ def main():
     show_map(casino_map, player)
     print()
     show_player(player)
-
+yoshikaz
 
 if __name__ == "__main__":
     main()
