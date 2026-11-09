@@ -1,0 +1,18 @@
+# マップは「行のリスト」です。参照するときは casino_map[y][x] の順です。 / The map is a list of rows. Access cells as casino_map[y][x].
+def create_map():
+    return [
+        ["#", "#", "#", "#", "#", "#", "#", "#", "#", "#"],
+        ["#", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
+        # TODO 1: y=2 の行を10個の要素で完成させる。 / TODO 1: Complete row y=2 with ten elements.
+        # x=0 と x=9 は壁、x=2 は B、x=5 は P、それ以外は通路。 / Walls at x=0 and x=9, B at x=2, P at x=5; all other cells are corridors.
+        [],
+        ["#", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
+        ["#", ".", "S", ".", ".", "R", ".", ".", ".", "#"],
+        ["#", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
+        # TODO 1: y=6 の行を10個の要素で完成させる。 / TODO 1: Complete row y=6 with ten elements.
+        # x=0 と x=9 は壁、x=2 は C、x=5 は F、それ以外は通路。 / Walls at x=0 and x=9, C at x=2, F at x=5; all other cells are corridors.
+        [],
+        ["#", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
+        ["#", ".", ".", ".", ".", ".", ".", ".", ".", "#"],
+        ["#", "#", "#", "#", "#", "#", "#", "#", "#", "#"],
+    ]
