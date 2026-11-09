@@ -1,14 +1,12 @@
-def create_player():
-    """プレイヤーの状態を辞書にまとめる。 / Store the player state in a dictionary."""
-    return {
-        "name": "プレイヤー",
-        "x": 1,
-        "y": 1,
-        "money": 1000,
-    }
+class Player:
+    def __init__(self, name="プレイヤー",x=1,y=1,money=1000):
+        self.name=name
+        self.x=x
+        self.y=y
+        self.money=money
 
 
-def show_player(player):
-    print(f"名前: {player['name']}")
-    print(f"所持金: {player['money']}")
-    print(f"位置: x={player['x']}, y={player['y']}")
+    def show_info(self):
+        print(f"名前: {self.name}")
+        print(f"所持金: {self.money}")
+        print(f"位置: x={self.x}, y={self.y}")

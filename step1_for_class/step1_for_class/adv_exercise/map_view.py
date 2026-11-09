@@ -3,7 +3,7 @@ def show_map(casino_map, player):
     for y in range(len(casino_map)):
         line = ""
         for x in range(len(casino_map[y])):
-            if x == player["x"] and y == player["y"]:
+            if x == player.x and y == player.y:
                 line += "@"
             else:
                 line += casino_map[y][x]
