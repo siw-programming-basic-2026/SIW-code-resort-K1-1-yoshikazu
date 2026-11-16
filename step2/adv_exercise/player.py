@@ -40,4 +40,11 @@ class Player:
 
         # TODO 1: 移動成功時に self.x, self.y, self.turn を更新して True を返す。
         # TODO 1: On successful movement, update self.x, self.y and self.turn, then return True.
-        return False
+
+        self.x=next_x
+        self.y=next_y
+        self.turn+=1
+        return True
+
+
+        
