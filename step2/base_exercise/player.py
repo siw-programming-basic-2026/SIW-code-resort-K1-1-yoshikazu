@@ -29,14 +29,17 @@ def get_move(command):
 
 
 def can_move(casino_map, x, y):
-    # 負の添字は末尾を参照するため、必ず先に範囲を確認する。 / Check bounds first because negative indices access elements from the end.
     if not (0 <= y < len(casino_map)):
         return False
     if not (0 <= x < len(casino_map[y])):
         return False
-    # TODO 2: 壁以外なら True、壁なら False を返す。 / TODO 2: Return True for non-wall cells and False for walls.
-    # 範囲の確認は上で完成済み。今はすべての移動を拒否する。 / Bounds checks are complete above. Currently all movement is rejected.
-    return False
+    # TODO: 壁ならFalse、それ以外はTrue
+    # TODO: return False for walls, True otherwise
+    #if casino_map[y][x] !="#":
+     #   return True
+    #return False
+    #または
+    return casino_map[y][x]!="#"
 
 
 def move_player(casino_map, player, movement):
