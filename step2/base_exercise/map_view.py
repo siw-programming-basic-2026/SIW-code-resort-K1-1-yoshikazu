@@ -2,13 +2,10 @@ def extract_view(casino_map, player):
     """中心から上下左右2マスを抽出し、マップ外は壁で埋める。 / Extract two cells in each direction from the center; fill out-of-map cells with walls."""
     # TODO 3: プレイヤーの左上2マスの座標を計算する。 / TODO 3: Calculate the coordinates two cells above and left of the player.
     # 現在の仮の値では、表示範囲が固定されている。 / The current placeholder values keep the view fixed.
-    start_x = 0
-    start_y = 0
-
     view = []
-    for y in range(start_y, start_y + 5):
+    for y in range(player['y']-2, player['y'] + 3):
         row = []
-        for x in range(start_x, start_x + 5):
+        for x in range(player['x']-2,  player['x']+3):
             if 0 <= y < len(casino_map) and 0 <= x < len(casino_map[y]):
                 row.append(casino_map[y][x])
             else:
