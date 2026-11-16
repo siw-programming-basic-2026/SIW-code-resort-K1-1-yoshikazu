@@ -17,12 +17,13 @@ def show_player(player):
 
 def get_move(command):
     """入力を (x の変化量, y の変化量) に変換する。 / Convert input to (change in x, change in y)."""
+    # TODO: a/s/d の変化量を完成させる
+    # TODO: complete coordinate changes for a/s/d
     moves = {
-        "w": (0, -1),
-        # TODO 1: a は左、s は下、d は右。変化量を完成させる。 / TODO 1: a moves left, s down and d right. Complete the coordinate changes.
-        "a": (0, 0),
-        "s": (0, 0),
-        "d": (0, 0),
+        'w': (0, -1),
+        'a': (-1, 0),
+        's': (0, 1),
+        'd': (1, 0),
     }
     return moves.get(command)
 
