@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIW Code Resort — STEP 2 Web Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">PYTHON → BROWSER / MOVEMENT LAB</p>
+      <h1>SIW Code Resort <span>— STEP 2 Web Demo</span></h1>
+      <p class="subtitle">同じ世界を、別の画面で表現する<br><span lang="en">The same world, a different interface</span></p>
+    </header>
+    <div class="layout">
+      <section class="panel map-panel" aria-labelledby="map-heading">
+        <div class="panel-heading"><h2 id="map-heading">リゾートマップ <small lang="en">Resort map</small></h2><span class="badge">10 × 10</span></div>
+        <p class="axis">原点 / Origin (0, 0) ↘　x →　y ↓</p>
+        <div id="map" class="map" role="img" aria-label="リゾートマップ / Resort map"></div>
+        <ul class="legend" aria-label="凡例 / Legend">
+          <li><b class="legend-player">@</b> プレイヤー / Player</li>
+          <li><b>#</b> 壁 / Wall</li>
+          <li><b>·</b> 通路 / Path</li>
+          <li><b>B P S R C F</b> 施設 / Facilities</li>
+        </ul>
+      </section>
+      <aside class="panel" aria-labelledby="status-heading">
+        <h2 id="status-heading">プレイヤー <small lang="en">Player state</small></h2>
+        <dl class="stats">
+          <div><dt>x 座標</dt><dd id="player-x">1</dd></div>
+          <div><dt>y 座標</dt><dd id="player-y">1</dd></div>
+          <div><dt>ターン / Turn</dt><dd id="player-turn">0</dd></div>
+        </dl>
+        <div class="result" role="status" aria-live="polite" aria-atomic="true"><span>最後の操作 / Last action</span><p id="last-action"></p></div>
+        <h3>移動する <small lang="en">Move</small></h3>
+        <p class="instructions">WASD・矢印キー、または下のボタン<br><span lang="en">Use WASD, arrow keys, or the buttons.</span></p>
+        <div class="controls" role="group" aria-label="移動 / Movement">
+          <button class="up" data-direction="w" aria-label="上 / Up (W)">↑<small>W</small></button>
+          <button class="left" data-direction="a" aria-label="左 / Left (A)">←<small>A</small></button>
+          <button class="down" data-direction="s" aria-label="下 / Down (S)">↓<small>S</small></button>
+          <button class="right" data-direction="d" aria-label="右 / Right (D)">→<small>D</small></button>
+        </div>
+        <button id="reset" class="reset">最初から / Reset</button>
+      </aside>
+    </div>
+    <footer><p>世界の中身と、世界の見せ方は分けて考えられる。<br><span lang="en">Separate the world’s state from the way it is presented.</span></p><p>Python版の実装後に使う比較教材です。必須の実装課題ではありません。<br><span lang="en">A comparison demo after the Python exercise, not a required implementation task.</span></p></footer>
+    <noscript>このデモにはJavaScriptが必要です。 / Enable JavaScript to run this demo.</noscript>
+  </main>
+</body>
+</html>
